@@ -7,13 +7,13 @@ class Family
 {
 	public static void main(String[] args) throws IOException
 	{
-		int girlgirl = 0;
-		int boygirl = 0;
-		int boyboy = 0;
+		double girlgirl = 0;
+		double boygirl = 0;
+		double boyboy = 0;
 		
-		int ggpercent = 0;
-		int bgpercent = 0;
-		int bbpercent = 0;
+		double ggpercent = 0;
+		double bgpercent = 0;
+		double bbpercent = 0;
 		
 		String token = "";
 		File filename = new File("data.txt");
@@ -39,17 +39,19 @@ class Family
 		}
 		
 		inFile.close();
-		int total = girlgirl + boygirl + boyboy;
+		
+		int total = (int)girlgirl + (int)boygirl + (int)boyboy;
 		ggpercent =	girlgirl / total;
 		bgpercent =	boygirl / total;
 		bbpercent =	boyboy / total;
-		
-		System.out.println(boyboy + "\t" + boygirl + "\t" + girlgirl);
-		
+			
 		System.out.println("Total Families: " + total);
 		System.out.println("% of families containing 2 girls: " + ggpercent + "%");
 		System.out.println("% of families containing 1 boy and 1 girl: " + bgpercent + "%");
 		System.out.println("% of families containing 2 boys: " + bbpercent + "%");
+		
+		//System.out.println("GG: " + girlgirl + "\tBG/GB: " + boygirl + "\tBB: " + boyboy);
+			// Total number of each type of family
 		
 
 
