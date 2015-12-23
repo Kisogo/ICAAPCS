@@ -1,12 +1,19 @@
 import java.util.Random;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.File;
 
+/*
+Name: Ryan Stenmark
+Date: 2015-12-22
+Purpose: Implement a Monte Carlo algorithm.
+*/
 
 class Monte
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
 		// Check the user's input.
-		
 		String usage = new String("Usage: java Monte [number of test rounds]");
 		int rounds = 0;
 	
@@ -36,9 +43,7 @@ class Monte
 			System.exit(1);
 		}
 		
-		
-		
-		
+		PrintWriter fw = new PrintWriter(new File("output"));
 		// Run the trials.
 		
 		Random rng = new Random();
@@ -50,12 +55,12 @@ class Monte
 		
 		for(int i=0; i < rounds; i++)
 		{
-		System.out.println("\t" + i + ": ");
+			fw.println("\t" + i + ": ");
 			while(dice != 5)
 			{
 				dice = rng.nextInt(5)+1;
 				rolls++;
-				System.out.println(dice + ", ");
+				fw.println(dice + ", ");
 			}	
 		results[i] = rolls;
 		rolls = 0;
@@ -71,6 +76,9 @@ class Monte
 			sum = sum + results[k];
 		}
 		double average = (double)sum/(double)rounds;
-		System.out.println("Out of " + rounds + " rounds, it took " + average + " rolls on average to roll a 5.");
+		System.out.println("Out of " + rounds + " rounds, it took " + average + " bottles on average to win.");
+		fw.println("Out of " + rounds + " rounds, it took " + average + " bottles on average to win.");
+		
+		fw.close();
 	}
 }
