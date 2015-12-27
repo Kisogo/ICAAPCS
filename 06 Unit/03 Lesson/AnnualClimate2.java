@@ -1,5 +1,10 @@
 import java.util.IllegalFormatException;
 
+/*
+Name: Ryan Stenmark
+Date: 2015-12-27
+Purpose: Present temperature and rainfall data in a human-readable format.
+*/
 
 
 class AnnualClimate2
@@ -101,9 +106,9 @@ class AnnualClimate2
 		if(useCentimeters == true)
 		{
 			System.out.println("[debug] using Centimeters");
-			for(int i = 0; i < Temp.length; i++)
+			for(int i = 0; i < Rainfall.length; i++)
 			{
-				Temp[i] = Temp[i] * 2.54;
+				Rainfall[i] = Rainfall[i] * 2.54;
 			}	
 		}
 		
@@ -111,9 +116,9 @@ class AnnualClimate2
 		if(useCelsius == true)
 		{
 			System.out.println("[debug] using Celsius");
-			for(int j = 0; j < Rainfall.length; j++)
+			for(int j = 0; j < Temp.length; j++)
 			{
-				Rainfall[j] = (Rainfall[j] - 32) * 5/9;
+				Temp[j] = (Temp[j] - 32) * 5/9;
 			}
 		}
 		
@@ -129,20 +134,21 @@ class AnnualClimate2
 		}
 		
 		double Temp_Avg = Temp_sum / Temp.length;
+		double Rainfall_Avg = Rainfall_Annual / Rainfall.length;
 		
 		
 		System.out.printf("%30s%n", "Climate Data");
-		System.out.printf("%15s%s, %s%n", "Location: ", Location[0], Location[1]);
-		System.out.printf("%s%15s(%s)%15s(%s)%n","Month", "Temperature ", TemperatureScale, "Precipitation ", DepthScale);
+		System.out.printf("%18s%s, %s%n%n", "Location: ", Location[0], Location[1]);
+		System.out.printf("%s%20s(%s)%20s(%s)%n","Month", "Temperature ", TemperatureScale, "Precipitation ", DepthScale);
 		System.out.println("************************************************");
 		
 		for(int k=0; k != Months.length; k++)
 		{
-			System.out.printf("%s%15f%15f%n", Months[k], Temp[k], Rainfall[k]);
+			System.out.printf("%s%13.1f%21.1f%n", Months[k], Temp[k], Rainfall[k]);
 		}
 		
 		System.out.println("************************************************");
-		System.out.printf("%15s%f%15s%f","Average: ", (Temp_Avg - (Temp_Avg % 0.1)), "Annual: ", (Rainfall_Annual - (Rainfall_Annual % 0.1)));
+		System.out.printf("%13s%.1f%16s%.1f%n%34s%.1f%n","Average: ", (Temp_Avg - (Temp_Avg % 0.1)), "Annual: ", (Rainfall_Annual - (Rainfall_Annual % 0.1)), "Average: ",  Rainfall_Avg);
 		
 		
 	}
