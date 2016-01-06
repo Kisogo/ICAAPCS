@@ -34,6 +34,7 @@ class Hurricane
 			
 			// Pressure
 			Matcher inLine = containsTab.matcher(line.substring(9,13));
+			Pattern containsTab = Pattern.compile("\\d+\\t"); // this regex will check for one or more numbers, followed by a tab character
 			if(inLine.find()) // tab character exists in substring
 			{
 				pressure[i] = Integer.parseInt(line.substring(9,12)); // shorten substring length to omit tab character
@@ -42,17 +43,25 @@ class Hurricane
 			}
 			
 			// Windspeed
-			inLine = containsTab.matcher(line.substring(13,17));
+			inLine = containsTab.matcher(line.substring(14,15));
 			if(inLine.find())
 			{
-				windspeed[i] = Integer.parseInt(line.substring(13,16));	
+				System.out.println(line.substring(14,15));
+				windspeed[i] = Integer.parseInt(line.substring(14,15));	
 			}else{
-				windspeed[i] = Integer.parseInt(line.substring(13,17));
+				System.out.println(line.substring(13,16));
+				windspeed[i] = Integer.parseInt(line.substring(13,16));
 			}
-			//*/
+			
 			
 			// Name
-			name[i] = line.substring(17);	
+			Pattern uppercase = Pattern.compile("^[A-Z].+"); // this regex will check for an uppercase letter at the beginning of the token, followed by one or more of any other character
+			inLine = uppercase.matcher(line.substring(16));
+			if(inLine.find()){
+				name[i] = line.substring(16);
+			}else{
+				name[i] = line.substring(17);
+			}	
 		}
 		
 		for(String x : dates)
@@ -64,6 +73,10 @@ class Hurricane
 			System.out.println(x);
 		}
 		for(int x : windspeed)
+		{
+			System.out.println(x);
+		}
+		for(String x : name)
 		{
 			System.out.println(x);
 		}
