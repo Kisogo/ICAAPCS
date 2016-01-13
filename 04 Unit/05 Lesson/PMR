@@ -1,0 +1,15 @@
+PROJECT TITLE: BMR (Basal Metabolic Rate)
+PURPOSE OF PROJECT: Calculate the user's BMR and present it in a human readable format.
+VERSION or DATE: 2015/11/02
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: This assessment was relatively simple for me to complete.
+      
+<-s>: I forgot that strings cannot be compared by using the '==' operator. 
+           
+*******************************************************************************
+In the future: Practice working with the String class more. It's confusing to work in another language
+>		where strings have their own type and are mutable and then come back to Java
+>		where they aren't. 

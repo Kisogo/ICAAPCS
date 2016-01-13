@@ -1,0 +1,14 @@
+PROJECT TITLE: CalculationsV5 
+PURPOSE OF PROJECT: Print equations and string literals of type double variables.
+VERSION or DATE: 2015-09-22
+AUTHORS: R. Stenmark
+
+**************************** P M R *********************************************
+ 
+<+s>: Nothing really went wrong. 
+      I used a newline escape character \n to add spaces between output text instead of an extra println.
+      
+<-s>: Nothing.
+           
+*******************************************************************************
+In the future: N/A.

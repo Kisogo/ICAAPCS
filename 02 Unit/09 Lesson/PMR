@@ -1,0 +1,17 @@
+PROJECT TITLE: CurrencyConversionV1
+PURPOSE OF PROJECT: Convert USD dollar values to other currencies
+VERSION or DATE: 2015-09-27
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: Relatively simple to implement.
+      
+<-s>: I overthought my implementation. I used a lot of variables to accomplish a task that
+      does not require a high amount of variables. This lead to a lot of wasted time working out
+      variable naming conventions in my head.
+           
+*******************************************************************************
+In the future: Don't overthink implementation. If the code I'm writing is becoming messy and 
+	       difficult to maintain before I've even finished it, that's probably a good sign
+	       to scrap it.

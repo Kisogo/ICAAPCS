@@ -1,0 +1,14 @@
+PROJECT TITLE: GradesV2 
+PURPOSE OF PROJECT: Calculate test grade averages.
+VERSION or DATE: 2015-09-23
+AUTHORS: R. Stenmark
+
+**************************** P M R *********************************************
+ 
+<+s>: I used arrays to store the test grades, and iterated through the array using a for loop.
+      I took Java Programming I over the summer, so a lot of this is review.
+      
+<-s>: Arrays start at index 0. I got a divide by zero runtime error when trying to calculate averages before I realized this.
+           
+*******************************************************************************
+In the future: n/a
