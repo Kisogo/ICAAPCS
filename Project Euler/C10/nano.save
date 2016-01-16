@@ -1,0 +1,7 @@
+flag, i = false, 1
+
+while flag == false:
+	for j in range(20):
+		if i % j != 0:
+			break
+		else if
