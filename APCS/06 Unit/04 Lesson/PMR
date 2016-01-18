@@ -1,0 +1,15 @@
+PROJECT TITLE: Heat Index
+PURPOSE OF PROJECT: Present Temperature, Humidity, and Heat Index data in a human readable table format.
+VERSION or DATE: 2015-12-29
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: This assessment was simple for me to complete, and I feel much more 
+	comfortable using printf and for-each loops now that I have completed it.
+      
+<-s>: I could not get the Heat Index formula to output the same result as shown in
+	the Assignment Instructions.
+           
+*******************************************************************************
+In the future: Brush up on order of operations.
