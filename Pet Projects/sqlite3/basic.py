@@ -25,11 +25,8 @@ c.execute(''' CREATE TABLE stocks
 
 # Insert many rows of data.
 prices = ()
-
 for i in range(100):
     prices = prices + ((random.uniform(1,10)+100,),)
-    
-#print(prices)
 
 c.executemany("INSERT INTO stocks VALUES ('2006-01-05', 'BUY', 'RHAT', 100, ?)", prices)
 
@@ -52,7 +49,7 @@ c.execute('SELECT * FROM stocks WHERE symbol=?', t)
 #print(c.fetchall())
 
 
-# Save (commit) the changes throught the Connection object.
+# Save (commit) the changes through the Connection object.
 conn.commit()
 
 while True:

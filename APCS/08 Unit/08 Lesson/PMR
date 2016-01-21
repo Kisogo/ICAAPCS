@@ -1,0 +1,15 @@
+PROJECT TITLE: CarV7 / CarV7Tester
+PURPOSE OF PROJECT: Construct multiple objects
+VERSION or DATE: 2016-01-21
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: This assessment was fairly simple for me to complete.
+      
+<-s>: My implementation could use some work. I'm not completely satisfied with how my program does some things.
+           
+*******************************************************************************
+In the future: Streamline my implementation a bit. For every additional object, I have to increase the array size and
+	define the new array index to be equal to the new object. This could be handled better -- the less code I have
+	to touch when adding new objects, the better.
