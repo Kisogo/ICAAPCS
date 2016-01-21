@@ -48,7 +48,7 @@ c.execute('SELECT * FROM stocks WHERE symbol=?', t)
 
 
 # Fetch all rows that meet the cursor's query.
-#print(c.fetchall())
+print(c.fetchall())
 
 
 # Save (commit) the changes throught the Connection object.
