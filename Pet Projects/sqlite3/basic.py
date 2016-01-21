@@ -1,5 +1,6 @@
 import sqlite3
 import random
+import sys
 
 # Create a Connection object in RAM that represents the database.
 conn = sqlite3.connect(":memory:")
@@ -54,6 +55,12 @@ c.execute('SELECT * FROM stocks WHERE symbol=?', t)
 # Save (commit) the changes throught the Connection object.
 conn.commit()
 
+while True:
+    try:
+        pass
+    except KeyboardInterrupt:
+        conn.close()
+        sys.exit()
 
 # Close the connection. Any uncommitted changes will be lost!
 conn.close()
