@@ -2,3 +2,7 @@
 # 2016-01-18
 
 # requires >= python 3.5
+
+from lxml import html
+import requests
+
