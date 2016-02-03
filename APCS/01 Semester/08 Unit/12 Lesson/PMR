@@ -1,0 +1,16 @@
+PROJECT TITLE: CO2FromWaste
+PURPOSE OF PROJECT: Calculate and present per-household annual CO2 emission statistics,
+			based on household size and items recycled.
+VERSION or DATE: 2016-01-26
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: This assessment was simple for me to complete.
+      
+<-s>: Formatting the output was the most time consuming part of completing this assessment. Maybe I'm just using printf wrong?
+	I disagreed with step 9 in the assignment instructions. I believe my design decision makes more sense and is cleaner than
+	the one provided.
+           
+*******************************************************************************
+In the future: N/A

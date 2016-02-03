@@ -1,0 +1,14 @@
+PROJECT TITLE: Fines / Challenge Program U2L10
+PURPOSE OF PROJECT: Generate an overdue book notice.
+VERSION or DATE: 2015-10-22
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: I learned a lot about the String class while completing this assessment.
+      
+<-s>: My code is hacky, there is probably a much more elegant (and smaller!) way
+	to complete the same steps.
+           
+*******************************************************************************
+In the future: Plan out the code structure before starting to write.
