@@ -1,0 +1,17 @@
+PROJECT TITLE: API Practice Lab
+PURPOSE OF PROJECT: Implement each method in ApiPractice
+VERSION or DATE: 2016-02-03
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: Implementing the methods was easy for me to do.
+      
+<-s>: I do not use an IDE that automatically packages my source code. I attempted to package it manually,
+	but I could not get the program to execute without a 'no main method found' error being thrown. Eventually
+	I gave up and did not package the source code. Use 'java ApiPracticeRunner' to run the program.
+           
+*******************************************************************************
+In the future: Learn to manually package projects or use an IDE that handles it automatically.
+		I think it is important to know how to manually package a project, so I will most likely
+		learn to do it manually.
