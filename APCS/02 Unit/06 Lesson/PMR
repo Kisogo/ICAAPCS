@@ -1,0 +1,14 @@
+PROJECT TITLE: Fibonacci numbers 
+PURPOSE OF PROJECT: Calculate the [n]th fibonacci number recursively
+VERSION or DATE: 2016-02-17
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: I feel more comfortable with implementing and understanding recursion.
+      
+<-s>: This assessment took me a long time and two attempts to complete.
+	Bug: If the user inputs a newline character (hitting enter without typing anything), the ':' cursor does not appear, but the shell is still usable.
+           
+*******************************************************************************
+In the future: Continue practicing recursion.

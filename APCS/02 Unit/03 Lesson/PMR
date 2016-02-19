@@ -1,0 +1,32 @@
+PROJECT TITLE: Mondrian art and Recursion 
+PURPOSE OF PROJECT: Create Mondrian art to exercise the concept of recursion
+VERSION or DATE: 2016-02-10
+AUTHORS: R. Stenmark
+
+
+4. My image was created by recursively subdividing containers into subcontainers (and subsubcontainers) before finally coloring them.
+
+5. To write a program to generate Mondrian art, I would follow the same process as I did here. 
+	1. Create a canvas.
+	2. Subdivide the canvas into multiple sub-canvases of random size.
+	3. Repeat step 2 until satisified.
+	4. Color the canvases, using some sort of rule system.
+
+6.
+	b. If a computer, with no human intervention, produced Mondrian art indistinguishable
+		from an original masterpiece, would it be a sign of artificial intelligence?
+
+	A. No, computers are capable of generating thousands of random pieces of Mondrian art a second.
+		Given an exorbant amount of time, the computer will eventually create something identical to an original. (See Infinite monkey theorem.)
+
+
+**************************** P M R ********************************************
+ 
+<+s>: I had fun completing this assessment. I use i3, a tiling window manager. Instead of creating the image in an image editor,
+	I created my image by opening pre-prepared images consisting of a single color using feh, in many individual terminal emulators. 
+	I then used i3 to move the terminal emulators around, and resize them, before finally using scrot to take a screenshot.
+      
+<-s>: This assessment took a long time to complete.
+           
+*******************************************************************************
+In the future: N/A
