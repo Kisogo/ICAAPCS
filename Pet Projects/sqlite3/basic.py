@@ -3,7 +3,8 @@ import random
 import sys
 
 # Create a Connection object in RAM that represents the database.
-conn = sqlite3.connect(":memory:")
+#conn = sqlite3.connect(":memory:")
+conn = sqlite3.connect("database.db")
 
 
 # Create a Cursor object from the Connection object.
