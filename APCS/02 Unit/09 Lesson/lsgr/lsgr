@@ -1,0 +1,100 @@
+#!/usr/bin/env python
+# 2016-02-26
+
+import re
+import argparse
+import os
+
+class sort:
+    
+        # Merge sort implementation
+        def merge_sort(self, data):
+                if len(data) <= 1:
+                        return data
+                
+                left = []
+                right = []
+            
+                for i, x in enumerate(data):
+                        if i % 2 != 0:
+                                left.append(x)
+                        else:
+                                right.append(x)
+                    
+                    
+                left = self.merge_sort(left)
+                right = self.merge_sort(right)          
+                return self.merge(left, right)
+                
+                
+        def merge(self, left, right):
+                result = []
+            
+                while len(left) != 0 and len(right) != 0:
+                        if left[0] <= right[0]:
+                                result.append(left[0])
+                                left = left[1:len(left)]
+                        else:
+                                result.append(right[0])
+                                right = right[1:len(right)]
+                    
+                    
+                while len(left) != 0:
+                        result.append(left[0])
+                        left = left[1:len(left)]
+                while len(right) != 0:
+                        result.append(right[0])
+                        right = right[1:len(right)]    
+            
+                return result
+
+
+class main:
+
+        sort = sort()
+
+        # Parser
+        parser = argparse.ArgumentParser(
+                prog='lsgr',
+                description='''
+                Outputs items from a directory that match one or more regular expressions.
+                Items are output in order of lexicographic rank. Searches the current working directory if no directory is specified with the -d flag.''')
+    
+        # Optional arguments
+        parser.add_argument('-d', nargs=1, default=os.getcwd(), help='specify an absolute path to search')
+    
+        # Positional arguments
+        parser.add_argument('regex', nargs=1)
+    
+        namespace = vars(parser.parse_args())
+	
+        # Go to specified directory
+        try:
+                tgtdir = namespace['d'][0:]
+                os.chdir(tgtdir)
+        except TypeError:
+                tgtdir = namespace['d'][0]
+                os.chdir(tgtdir)
+                
+        diritems = os.listdir(tgtdir)
+    
+        # Match items to regex and store them
+        regex = namespace['regex'][0]
+        regex = re.compile(regex)
+        result = []
+        
+        for item in diritems:
+                if regex.findall(item):
+                        result.append(item)
+                else:
+                        pass
+                        
+        # Sort the matches                
+        result = sort.merge_sort(result)
+        
+        # Output the results
+        for i in result:
+                print(i)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,5 @@
+To use lsgr anywhere:
+
+- Add the directory containing lsgr to your PATH
+- Or put lsgr into a directory already in your PATH ($HOME/bin on linux for example)
+- Or use the -d flag to specify a directory
