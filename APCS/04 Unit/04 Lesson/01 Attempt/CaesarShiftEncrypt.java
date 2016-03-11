@@ -1,13 +1,12 @@
 class CaesarShiftEncrypt
 {
-    final int shiftKey = 0;
-    final char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+    final static char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
     
-    public void setShiftKey(int s)
+    public static void setShiftKey(int s)
     {
         if(s >= 0 || s <= 25)
         {
-            shiftKey = s;    
+            final int shiftKey = s;    
         }
         else
         {
@@ -15,9 +14,12 @@ class CaesarShiftEncrypt
         }
     }
     
+    public static int getShiftKey()
+    {
+        return shiftKey;
+    }
     
-    
-    public String Encrypt(int shiftKey, String message)
+    public static void encrypt(int shiftKey, String message)
     {
         String out = "";
         int cursor = 0;
@@ -27,9 +29,16 @@ class CaesarShiftEncrypt
             cursor = binarySearch(alphabet, c);
             
             /* cursor wrapping */
+            
+            /* wrap over the top of the array while encrypting */
             if(cursor + shift > 25)
             {
                 out = out + alphabet[25 - cursor + shift];
+            }
+            /* wrap over the bottom of the array while decrypting */
+            else if(cursor + shift < 0)
+            {
+                out = out + alphabet[25 + cursor + shift];
             }
             else
             {
@@ -37,6 +46,6 @@ class CaesarShiftEncrypt
             }
         }
         
-        return out;
+        System.out.printf("%n%xs", out);
     }
 }
