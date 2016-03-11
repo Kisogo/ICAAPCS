@@ -10,14 +10,14 @@ def sieve(n):
             for j in range(i+1, i*i, i):
                 if j not in multiples:
                     multiples.append(j)
-                    print(str(j))
+                    #print(str(j))
                     
     total = 0
     for i in multiples:
         total = total + i
-        print(str(i))
+        #print(str(i))
     
     print("\n" + str(total))
     
     
-sieve(2000000)
+sieve(500)

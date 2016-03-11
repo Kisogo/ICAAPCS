@@ -2,7 +2,7 @@ from tkinter import *
 import random as r
 
 class sort:
-        # bubblesort    
+        # bubblesort #########################################################################
     def bubble_sort(self, data):
         m = len(data)
         comparisons = 0
@@ -22,7 +22,7 @@ class sort:
         print("comparisons: " + str(comparisons) + " swaps: " + str(swaps))           
         return data
         
-        # mergesort        
+        # mergesort #########################################################################       
     def merge_sort(self, data):
         if len(data) <= 1:
             return data
@@ -63,7 +63,7 @@ class sort:
             
         return result            
 
-        # quick sort
+        # quick sort #########################################################################
     def quicksort(self, data, p):
         if len(data) <= 1 or p > len(data):
             
@@ -89,6 +89,7 @@ class sort:
                     cp = cp + 1
                 
         return self.quicksort(data, p) 
+        
             
                     
 
@@ -122,6 +123,3 @@ class main:
 
 m = main()
 
-
-#wow such shitty code
-#much lmao

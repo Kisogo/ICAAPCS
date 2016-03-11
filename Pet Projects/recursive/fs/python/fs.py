@@ -5,11 +5,12 @@ import os
 
 def walk(path):
     if(os.path.isdir(path) == True):
+        print(path)
         os.chdir(path)
         for subdir in os.listdir(path):
             try:
-                print(os.path.realpath(subdir))
-                #walk(os.path.realpath(subdir))
+                #print(os.path.realpath(subdir))
+                walk(os.path.realpath(subdir))
             finally:
                 break
 

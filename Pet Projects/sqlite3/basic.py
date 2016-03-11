@@ -42,12 +42,12 @@ c.executemany('INSERT INTO stocks VALUES (?, ?, ?, ?, ?)', purchases)
 #c.executemany("INSERT INTO stocks VALUES ('2006-01-05', 'BUY', 'RHAT', 100, ?)", prices)
 
 
-# Display a row of data (Insecurely) -- NEVER DO THIS!
+# Display a row of data (unsecure) -- NEVER DO THIS!
 #symbol = 'RHAT'
 #c.execute("SELECT * FROM stocks WHERE symbol = '%s'" %symbol)
 
 
-# Display a row of data (Securely).
+# Display a row of data (secure).
 #t = ('RHAT',)
 #c.execute('SELECT * FROM stocks WHERE symbol=?', t)
 
