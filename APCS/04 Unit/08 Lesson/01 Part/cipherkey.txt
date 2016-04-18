@@ -1,0 +1,27 @@
+a	I
+b	unused
+c	unused
+d	unused
+e	unused
+f	S
+g	C
+h	U
+i	T
+j	unused
+k	A
+l	unused
+m	B
+n	M
+o	F
+p	V
+q	H
+r	Y
+s	L
+t	G
+u	unused
+v	D
+w	N
+x	R
+y	O
+z	E
+

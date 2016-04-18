@@ -1,0 +1,122 @@
+/* Make the body element unscrollable (while a message box is open) */
+body.message-boxes-visible {
+  overflow: hidden;
+}
+
+/**
+ * Outer container
+ *
+ * Covers the entire screen. Provides a darkened background when a box is being
+ * shown.
+ */
+.message-boxes {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* Can scroll vertically */
+  overflow-y: auto;
+
+  /* Background is invisible if we don't additionally have the visible class */
+  background-color: rgba(0, 0, 0, 0);
+
+  -webkit-transition: background-color 0.15s linear;
+  -moz-transition: background-color 0.15s linear;
+  -o-transition: background-color 0.15s linear;
+  transition: background-color 0.15s linear;
+}
+
+/* Transparent dark background when a message box is being shown */
+.message-boxes.message-boxes-visible {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * Inner container
+ *
+ * Determines the width and position of the message box.
+ */
+.message-boxes #box-container {
+  position: relative;
+  z-index: 99999;
+  width: 350px;
+  max-width: 95%;
+
+  /* Centered horizontally, and separated from the top and bottom of the page
+  by at least this amount */
+  margin: 30px auto;
+
+  padding: 0;
+}
+
+.message-boxes .message-box {
+  /* Rounded corners at the top, but sharp corners at the bottom */
+  border-radius: 6px 6px 0 0;
+
+  background-color: white;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  
+  opacity: 0;
+
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+
+  -webkit-transition: opacity 0.15s linear, -webkit-transform 0.15s linear;
+  -o-transition: opacity 0.15s linear, -o-transform 0.15s linear;
+  transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.message-boxes .message-box-visible {
+  opacity: 1;
+
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.message-boxes .message-box-body {
+  padding: 25px;
+
+  font-size: 16px;
+  text-align: center;
+}
+
+.message-boxes .message-box-footer {
+  padding: 20px;
+
+  border-top: 1px solid #e5e5e5;
+
+  text-align: center;
+}
+
+.message-boxes .btn {
+  width: 47%;
+  height: 100%;
+  padding: 10px 0;
+
+  font-size: 16px;
+}
+
+.message-boxes .btn+.btn {
+  margin-left: 5%;
+}
+
+.message-boxes #text-box {
+  /*width: 150px;*/
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.message-boxes .checkbox {
+  margin-right: 5%;
+}

@@ -1,0 +1,272 @@
+.owl-carousel img {
+  /**
+   * Without this, the images just use their actual dimensions.
+   */
+  width: 100%;
+}
+
+#auth-options {
+  margin: 0;
+}
+
+#auth-options .side-link {
+  float: right;
+
+  color: #333333;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-size: 9px;
+}
+
+/**
+ * Some authentication methods, such as E-mail, SMS and Guest, just use the
+ * default rules here, so have no rules specific to them anywhere below.
+ * Others modify the colours.
+ */
+.btn-connect {
+  width: 100%;
+  height: 44px;
+  padding: 4px 12px;
+  margin: 3px 0;
+
+  position: relative;
+
+  color: #333333;
+  font-weight: 500;
+  text-shadow: none;
+
+  background-color: #f5f5f5;
+
+  border-color: rgba(0, 0, 0, 0.1);
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn-connect:hover, .btn-connect:focus, .btn-connect:active {
+  color: #333333;
+  background-color: #e6e6e6;
+}
+
+/**
+ * Used on buttons that have colored backgrounds, like Google, Twitter and
+ * Facebook.
+ */
+.btn-connect-colored {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+  /*border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/
+}
+.btn-connect-colored:hover, .btn-connect-colored:focus, .btn-connect-colored:active {
+  color: white;
+}
+
+.btn-connect .typcn {
+  float: left;
+  position: absolute;
+  left: 5px;
+  
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.btn-facebook { background-color: #3b5998; }
+.btn-facebook:hover, .btn-facebook:focus { background-color: #334d84; }
+
+.btn-twitter { background-color: #00b0ed; }
+.btn-twitter:hover, .btn-twitter:focus { background-color: #009fd6; }
+
+.btn-google { background-color: #d14836; }
+.btn-google:hover, .btn-google:focus { background-color: #c53727; }
+
+.btn-linkedin { background-color: #006caa; }
+.btn-linkedin:hover, .btn-linkedin:focus { background-color: #004e7b; }
+
+.btn-airmiles { background-color: #0076bb; }
+.btn-airmiles:hover, .btn-airmiles:focus { background-color: #0068a5; }
+.btn-airmiles img {
+  width: 20px;
+
+  position: absolute;
+  left: 8px;
+  top: 12px;
+}
+
+.btn-sms { background-color: #229B3B; }
+.btn-sms:hover, .btn-sms:focus { background-color: #1d8633; }
+
+/**
+ * The colored authentication buttons originally had a vertical linear color
+ * gradient, but Brendan wasn't sure whether he liked them, so he turned them
+ * off. To turn them back on, uncomment this section below.
+ */
+
+/*.btn-connect-colored {
+  background-repeat: repeat-x;
+}
+
+.btn-facebook {
+  background-image: -moz-linear-gradient(top, #3b5998, #133783);
+  background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #3b5998), color-stop(1, #133783));
+  background-image: -webkit-linear-gradient(top, #3b5998, #133783);
+  background-image: -ms-linear-gradient(top, #3b5998, #133783);
+  background-image: -o-linear-gradient(top, #3b5998, #133783);
+  background-image: linear-gradient(to bottom, #3b5998, #133783);
+}
+
+.btn-twitter {
+  background-image: -moz-linear-gradient(top, #2daddc, #0271bf);
+  background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #2daddc), color-stop(1, #0271bf));
+  background-image: -webkit-linear-gradient(top, #2daddc, #0271bf);
+  background-image: -ms-linear-gradient(top, #2daddc, #0271bf);
+  background-image: -o-linear-gradient(top, #2daddc, #0271bf);
+  background-image: linear-gradient(to bottom, #2daddc, #0271bf);
+}
+
+.btn-google {
+  background-image: -moz-linear-gradient(top, #dd4b39, #d14836);
+  background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #dd4b39), color-stop(1, #d14836));
+  background-image: -webkit-linear-gradient(top, #dd4b39, #d14836);
+  background-image: -ms-linear-gradient(top, #dd4b39, #d14836);
+  background-image: -o-linear-gradient(top, #dd4b39, #d14836);
+  background-image: linear-gradient(top, #dd4b39, #d14836);
+}*/
+
+.auth-field {
+  display: inline-block;
+
+  width: 100%;
+  height: 30px;
+  margin-bottom: 7px;
+}
+
+/**
+ * The browser gives input elements the 'invalid' pseudo-class if it
+ * determines that they contain invalid values. For example, if you have type
+ * ="email" then Chrome requires the value to contain an @ and a period.
+ *
+ * This rule makes invalid input elements glow red. Bootstrap originally did
+ * this, but no longer does.
+ */
+input[type="text"].form-control:focus:invalid,
+input[type="email"].form-control:focus:invalid,
+input[type="number"].form-control:focus:invalid,
+input[type="tel"].form-control:focus:invalid,
+/* Bootstrap had these last four for some reason: */
+input[type="text"].form-control:focus:invalid:focus,
+input[type="email"].form-control:focus:invalid:focus,
+input[type="number"].form-control:focus:invalid:focus,
+input[type="tel"].form-control:focus:invalid:focus {
+  border-color: #b94a48;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(238, 95, 91, 0.6);
+}
+
+.auth-field-pairs .auth-field {
+  width: 49%;
+}
+
+.auth-field-birthday .auth-field {
+  width: 32%;
+  display: block;
+  float: left;
+  margin-right: 2%;
+}
+.auth-field-birthday .auth-field:last-child {
+  margin-right: 0;
+}
+
+.auth-field-pairs .auth-field:nth-child(even) {
+  float: right;
+}
+
+.auth-label {
+  display: inline-block;
+
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.auth-form .btn-connect {
+  height: 30px;
+}
+
+/**
+ * This is here because intl-tel-input creates a div and puts the input
+ * element you give it inside that div. That makes the input element's 100%
+ * width be only 100% of the div's width.
+ */
+.auth-form .intl-tel-input {
+  width: 100%;
+}
+
+#auth-options .guest-link {
+  color: #cccccc;
+}
+
+#auth-options .guest-link:hover {
+  color: #333333;
+}
+
+.sms-input-form #have-code {
+  float: left;
+}
+
+.sms-input-form .intl-tel-input {
+  margin-bottom: 7px;
+}
+
+#sms-verify-form .btn {
+  display: inline-block;
+
+  width: 40%;
+  margin: 0 0 7px 0;
+
+  float: right;
+}
+
+#sms-verify-form .auth-field {
+  width: 58%;
+}
+
+#passport-id-form #standard-msg {
+  margin-bottom: 8px;
+
+  text-align: center;
+  font-size: 13px;
+}
+
+#passport-id-form #custom-msg {
+  margin-bottom: 10px;
+
+  text-align: center;
+  font-size: 11px;
+}
+
+#passport-id-form #passport-id {
+  text-align: center;
+}
+
+.tos-prompt .message-box-body {
+  /* Message boxes use center alignment by default. */
+  text-align: left;
+}
+
+.tos-prompt #ok:disabled {
+  opacity: 0.5;
+}
+
+.tos-prompt .tos-prompt-checkbox-container {
+  margin-bottom: 10px;
+
+  text-align: left;
+}
+
+.tos-prompt .tos-prompt-checkbox-container #checkbox {
+  margin-left: 10px;
+}
+
+.tos-prompt .tos-prompt-checkbox-container label {
+  margin-left: 5px;
+
+  font-weight: normal;
+}
