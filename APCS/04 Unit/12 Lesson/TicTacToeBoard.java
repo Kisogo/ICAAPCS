@@ -34,8 +34,7 @@ public class TicTacToeBoard {
      * @throws IllegalMoveException if the move attempts to place a mark 
      * on a space that is already occupied.
      */
-    public boolean move(String input, char mark) throws InvalidInputException,
-            IllegalMoveException {
+    public boolean move(String input, char mark) throws InvalidInputException, IllegalMoveException {
         /**
          * Check for the following cases.
          * 1. If the input is null, throw a NullInputException.
@@ -50,17 +49,27 @@ public class TicTacToeBoard {
          */
          
          if(input == null) {
-             throw NullInputException;
+             throw new NullInputException();
          }
-         if(input.length != 2) {
-             throw InvalidInputException;
+         if(String.valueOf(input).length() != 2) {
+             throw new InvalidInputException();
          }
          
          char[] inputarr = input.toCharArray();
+         char inputfirst = Character.toUpperCase(inputarr[0]);
+         char inputlast = inputarr[0];
+          
+         // Check if input is valid (A-C, 1-3) 
+         if(!(inputfirst == 'A') 
+            && !(inputfirst == 'B') 
+            && !(inputfirst == 'C')) {
+                throw new InvalidInputException();
+         }
          
-         if(Character.toUpperCase(inputarr[0]) != 'A' || 'B' || 'C'
-            && (inputarr[1] != '1' || '2' || '3')) {
-             throw InvalidInputException;
+         if(!(inputlast == '1')
+            && !(inputlast == '2')
+            && !(inputlast == '3')) {
+                throw new InvalidInputException();              
          }
 
         
@@ -73,14 +82,14 @@ public class TicTacToeBoard {
         int row;
         int col;
         
-        switch(inputarr[0]) {
+        switch(Character.toUpperCase(inputarr[0])) {
             case 'A': row = 0;
                       break;
             case 'B': row = 1;
                       break;
             case 'C': row = 2;
                       break;
-            default:  throw InvalidInputException;
+            default:  throw new InvalidInputException();
         }
         
         switch(inputarr[1]) {
@@ -90,7 +99,7 @@ public class TicTacToeBoard {
                       break;
             case '3': col = 2;
                       break;
-            default:  throw InvalidInputException;
+            default:  throw new InvalidInputException();
         }
         
         // Now that we have converted the input to variables of type int for
