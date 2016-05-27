@@ -1,0 +1,13 @@
+PROJECT TITLE: Tic Tac Toe
+PURPOSE OF PROJECT: Review inheritance concepts/
+VERSION or DATE: 2016-04-29
+AUTHORS: R. Stenmark
+
+**************************** P M R ********************************************
+ 
+<+s>: This assessment was simple for me to complete.
+      
+<-s>: I had issues compiling the project initially. I needed to include a '-d .' compiler option when compiling.
+           
+*******************************************************************************
+In the future: Further my understanding of how packages work.

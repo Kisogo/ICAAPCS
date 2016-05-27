@@ -1,11 +1,15 @@
 package tictactoe;
+import java.util.Random;
 
 /**
  * Represents a computer-controlled player. 
  */
 public class ComputerPlayer extends Player {
+    private final Random rng;
     public ComputerPlayer(TicTacToeBoard board, char mark) {
         /** Pass board and mark to the parent class constructor. */
+        super(board, mark);
+        rng = new Random();
 
     }
     
@@ -29,7 +33,7 @@ public class ComputerPlayer extends Player {
         boolean gameOver = false;
         System.out.println("\nComputer's move: ");
          
-        while (!turnDone) {
+        while (turnDone == false) {
             /** 
              * Generate random row and col values related to the 
              * dimensions of the board grid. The computer will continue making
@@ -38,10 +42,13 @@ public class ComputerPlayer extends Player {
             int row;
             int col;
             
+            row = rng.nextInt(3);
+            col = rng.nextInt(3);
+            
             try {
                 /** Fix any errors in the lines below. */
                 gameOver = board.move(row, col, mark);
-                turnDone = false;
+                turnDone = true;
             } catch (IllegalMoveException e) {
                 // Display nothing. If the move was illegal, the computer
                 // will try again.

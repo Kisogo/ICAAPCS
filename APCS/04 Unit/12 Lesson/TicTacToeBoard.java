@@ -57,7 +57,7 @@ public class TicTacToeBoard {
          
          char[] inputarr = input.toCharArray();
          char inputfirst = Character.toUpperCase(inputarr[0]);
-         char inputlast = inputarr[0];
+         char inputlast = inputarr[1];
           
          // Check if input is valid (A-C, 1-3) 
          if(!(inputfirst == 'A') 
@@ -125,6 +125,18 @@ public class TicTacToeBoard {
      */
     public boolean move(int row, int col, char mark) 
             throws IllegalMoveException {
+                
+                if(grid[row][col] != SPACE) {
+                    throw new IllegalMoveException();
+                } else {
+                    grid[row][col] = mark;
+                }
+                
+                if(isWin(mark) || isTie()) {
+                    return true;
+                } else {
+                    return false;
+                }
         /**
          * 1. Check to see if the incoming move tries to place a mark on a
          *    space that is already occupied with X or O. If it is, throw 
@@ -139,7 +151,7 @@ public class TicTacToeBoard {
 
 
         /** Temporary return statement. Remove when code above is complete. */
-        return false;
+        //return false;
     }
     
     /**
@@ -189,7 +201,25 @@ public class TicTacToeBoard {
                 return gameHasBeenWon;
             }
         }
-
+        
+        // Check for vertical wins.
+        for (int col = 0; col < 3; col++) {
+            boolean win = true;
+            for (int row = 0; row < 3; row++) {
+                if (grid[row][col] != mark) win = false;
+            }
+            if (win) {
+                gameHasBeenWon = true;
+                return gameHasBeenWon;
+            }
+        }
+        
+        // Check for diagonal wins.
+        if(grid[1][1] == mark && ((grid[0][0] == mark && grid [2][2] == mark) 
+                              || (grid[0][2] == mark && grid[2][0] == mark))) {
+            gameHasBeenWon = true;
+            return gameHasBeenWon;
+        }
         
         // Return false if you have not returned true anywhere.
         return false;

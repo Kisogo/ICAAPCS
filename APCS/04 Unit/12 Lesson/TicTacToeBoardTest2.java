@@ -1,4 +1,4 @@
-package tictacToe;
+package tictactoe;
 
 /**
  * The following is a short program that tests the coding of class

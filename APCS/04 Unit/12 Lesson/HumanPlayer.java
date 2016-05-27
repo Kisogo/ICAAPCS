@@ -9,6 +9,7 @@ public class HumanPlayer extends Player {
     
     public HumanPlayer(TicTacToeBoard board, char mark) {
         /** Pass board and mark to the parent class constructor. */
+        super(board, mark);
 
         
         // Create a scanner for user input.
@@ -34,12 +35,12 @@ public class HumanPlayer extends Player {
         /** Fix the syntax and logic errors in this method. */
         boolean turnDone = false;
         boolean gameOver = false;
-        while (!gameOver) {
-            System.out.print("\nPlease enter your move: ");
-            String input = scanner.nextLine();
+        while (turnDone == false) {
+            System.out.println("\nPlease enter your move:");
+            String input = scanner.next();
             
             try {
-                turnDone = board.move(mark, input);
+                gameOver = board.move(input, mark);
                 turnDone = true;
             } catch (InvalidInputException iie) {
                 System.out.println(iie.getMessage());
@@ -47,6 +48,6 @@ public class HumanPlayer extends Player {
                 System.out.println(ime.getMessage());               
             }
         }
-        return turnDone;
+        return gameOver;
     }
 }

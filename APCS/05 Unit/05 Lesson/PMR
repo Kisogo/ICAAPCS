@@ -1,12 +1,11 @@
-PROJECT TITLE: Transversals
-PURPOSE OF PROJECT: Learn to use traversal methods
-VERSION or DATE: 2016-05-09
+PROJECT TITLE: Comparable<T>
+PURPOSE OF PROJECT: Learn to implement the Comparable<T> interface
+VERSION or DATE: 2016-05-08
 AUTHORS: R. Stenmark
 
 **************************** P M R ********************************************
  
-<+s>: This assessment was easy for me to complete.
-      None of the concepts introduced in this lesson were new to me.
+<+s>: This assessment was fairly simple for me to complete.
       
 <-s>: N/A
            
